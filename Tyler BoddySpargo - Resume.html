@@ -59,6 +59,7 @@
       }
       h4 {
         font-size: 1.2em;
+        
         margin-top: 0;
       }
       .remove {
@@ -88,23 +89,23 @@
         LAYOUT
        */
       #page-container {
-        margin: 20px 30px;
+        padding: 10px 20px;
         display: grid;
-        grid-template-columns: 250px auto;
+        grid-template-columns: 180px auto;
       }
       header {
         position: relative;
         font-family: 'Josefin Sans';
-        height: 100px;
+        height: 80px;
         grid-column: 1 / span 2;
       }
       #sidebar {
-        padding: 10px 10px;
+        padding: 10px 0;
         grid-column: 1 / 2;
       }
       .main {
         grid-column: 2 / 2;
-        padding: 0 10px;
+        padding: 0 0 0 15px;
       }
       footer {
         text-align: center;
@@ -125,6 +126,8 @@
       }
       .profession {
         position: relative;
+        float: right;
+        bottom: 10px;
         font-size: 1.5em;
       }
       /*
@@ -148,7 +151,7 @@
         CONTENT
        */
       section {
-        padding: 0 15px;
+        padding: 0;
         margin-bottom: 15px;
       }
       article.wide {
@@ -161,7 +164,6 @@
       }
       .heading h4 {
         flex: initial;
-        margin-bottom: 0;
       }
       .heading .links,
       .heading .subheading {
@@ -245,7 +247,6 @@
       @page {
         margin: 0.25in;
         size: 8.5in 11in;
-        table { page-break-inside : avoid }
       }
       /*
         MAIN PRINT STYLE
@@ -255,7 +256,6 @@
           COLOR
          */
         .label-pill {
-          background-color: transparent;
           border-width: 2px;
         }
         .label-pill.inverted {
@@ -266,30 +266,36 @@
           LAYOUT
          */
         #page-container {
-          font-size: 11.5px;
+          margin: 0px;
+          padding: 0px;
+          font-size: 11px;
           grid-template-columns: 150px auto
         }
         header {
-          height: 75px;
+          height: 60px;
         }
-        .main, #sidebar {
-          padding: 0;
+        .main {
+          padding: 0 0 0 5px;
         }
         .side-list-item {
           margin-top: 5px;
           margin-bottom: 5px;
         }
         #sidebar {
-          padding-top: 10px;
+          padding: 0 5px 0 0;
+          margin: 0px;
         }
         #sidebar .content {
           padding: 0 5px;
         }
         .thumbnail-image {
-          width: 100px;
+          width: 90px;
         }
         .back-button {
           display: none;
+        }
+        table {
+          page-break-inside : avoid
         }
       }
     </style>
@@ -484,7 +490,8 @@
           <div class="heading">
             <h4>BA in Romance Languages (French/Spanish)</h4>
             <span class="years">2008 - 2012</span>
-            <a class="links" href="https://www.carleton.edu/">Carleton College</a>
+            
+            <div class="links"><a href="https://www.carleton.edu/">Carleton College</a> | GPA: 3.54</div>
           </div>
           <p class="article-body remove">
             I received an exceptional liberal arts education from Carleton, taking advantage of study abroad opportunities in both France and Spain as I slowly decided on a major in Romance Languages. Carleton is also where I took my first computer science class, introducing me to the endless possibilities of a career in programming.
