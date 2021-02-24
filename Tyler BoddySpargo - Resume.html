@@ -127,7 +127,7 @@
       .profession {
         position: relative;
         float: right;
-        bottom: 10px;
+        bottom: 5px;
         font-size: 1.5em;
       }
       /*
@@ -214,6 +214,13 @@
         margin-top: 5px;
         margin-bottom: 0;
         padding-left: 25px;
+      }
+      .article-body > ul {
+        padding-left: 25px; 
+      }
+      .article-body > ul,
+      .article-body > p {
+        margin: 5px 0;
       }
       .thumbnail-image {
         width: 125px;
@@ -308,7 +315,7 @@
       </div>
       <div class="header-title">
         <h1 class="name">Tyler BoddySpargo</h1>
-        <i class="profession">Web Developer</i>
+        <i class="profession">DevOps Manager</i>
       </div>
     </header>
     <div id="sidebar">
@@ -347,12 +354,13 @@
             <li class="side-list-item">AngularJS</li>
             <li class="side-list-item">Knockout.js</li>
             <li class="side-list-item">JavaScript ES6</li>
+            <li class="side-list-item">Python</li>
+            <li class="side-list-item">PowerShell</li>
             <li class="side-list-item">CSS & SCSS</li>
             <li class="side-list-item">Ruby on Rails</li>
             <li class="side-list-item">React</li>
-            <li class="side-list-item">Git/SVN</li>
+            <li class="side-list-item">Git</li>
             <li class="side-list-item">HTML5</li>
-            <li class="side-list-item">.NET/C# MVC</li>
           </ul>
         </div>
       </div>
@@ -361,10 +369,13 @@
         <div class="content">
           <ul class="side-list">
             <li class="side-list-item"><span class="fa fa-circle left remove"></span>Ping-Pong</li>
-            <li class="side-list-item"><span class="fa fa-book left remove"></span>Fiction books</li>
+            <li class="side-list-item"><span class="fa fa-book left remove"></span>Fantasy books</li>
             <li class="side-list-item"><span class="fa fa-male left remove"></span>Distance running</li>
             <li class="side-list-item"><span class="fa fa-bicycle left remove"></span>Biking</li>
+            <li class="side-list-item"><span class="fa fa-check left remove"></span>Calisthenics</li>
+            <li class="side-list-item"><span class="fa fa-check left remove"></span>Golf</li>
             <li class="side-list-item"><span class="fa fa-check left remove"></span>Broomball</li>
+            <li class="side-list-item"><span class="fa fa-check left remove"></span>Playing guitar</li>
             <li class="side-list-item"><span class="fa fa-check left remove"></span>Playing piano</li>
             <li class="side-list-item"><span class="fa fa-globe left remove"></span>Budget traveling</li>
           </ul>
@@ -376,82 +387,41 @@
         <h2 class="inverted rounded"><span class="fa fa-user-circle left"></span>Summary</h2>
         <article class="wide">
           <p>
-            I love to use elegant code to solve problems bit by byte and endeavor to find solutions that perform well too. My training in literature, the humanities, and music adds a unique creative spark to the development projects I undertake. I've also lived abroad for several years, immersing myself in foregin cultures and becoming a more thoughtful developer and person through exposure to different ways of looking at the world.
+            The primary theme of my career has been to identify inefficiencies or negative outcome trends and address them with automation. My more recent challenges have been to scale those solutions and replicate the mindset and approach across teams at Epic Hosting, a medical software infrastructure management service provider. I am very interested in tools that promote those goals and enable developers and engineers to excel at quickly delivering high-quality products and features.
           </p>
         </article>
-      </section>
-      <section class="projects">
-        <h2 class="inverted rounded"><span class="fa fa-wrench left"></span>Projects</h2>
-        <div class="content with-images">
-          <img class="thumbnail-image" src="https://tboddyspargo.github.io/img/blocipedia_landing_1.png" />
-          <article class="wide">
-            <div class="heading">
-              <h4><a href="https://github.com/tboddyspargo/blocipedia" target="_blank">Blocipedia</a> <small>(Rails)</small></h4>
-              <span class="years"></span>
-            </div>
-            <ul class="article-body">
-              <li>Used RSpec and TDD paradigm to create a maintainable codebase.</li>
-              <li>Leveraged Devise and Pundit to quickly implement authentication and authorization.</li>
-            </ul>
-          </article>
-          <img class="thumbnail-image" src="https://tboddyspargo.github.io/img/chatterbox_landing2.png" />
-          <article class="wide">
-            <div class="heading">
-              <h4><a href="https://github.com/tboddyspargo/bloc-chat-angular" target="_blank">ChatterBox</a> <small>(AngularJS + Firebase)</small></h4>
-              <span class="years"></span>
-            </div>
-            <ul class="article-body">
-              <li>Created directives and services to appropriately separate concerns and share functionality.</li>
-              <li>Constructed an elaborate data model to enhance security in Firebase.</li>
-            </ul>
-          </article>
-          <img class="thumbnail-image right" src="https://tboddyspargo.github.io/img/blocjams3_landing1.png" />
-          <article class="wide">
-            <div class="heading">
-              <h4><a href="https://github.com/tboddyspargo/bloc-jams-react" target="_blank">BlocJams</a> <small>(React)</small></h4>
-              <span class="years"></span>
-            </div>
-            <ul class="article-body">
-              <li>Built reusable components as site building blocks.</li>
-              <li>Used state-aware event listener callbacks to support plyr audio framework.</li>
-            </ul>
-          </article>
-          <img class="thumbnail-image right" src="https://tboddyspargo.github.io/img/bloculator_main.png" />
-          <article class="wide">
-            <div class="heading">
-              <h4><a href="https://github.com/tboddyspargo/bloc-calculator" target="_blank">Bloculator</a> <small>(Ruby)</small></h4>
-              <span class="years"></span>
-            </div>
-            <ul class="article-body">
-              <li>Researched infix and postfix mathematic notation styles to support complex expressions.</li>
-            </ul>
-          </article>
-        </div>
       </section>
       <section class="employment">
         <h2 class="inverted rounded"><span class="fa fa-building left"></span>Technical Work Experience</h2>
         <article class="employer wide">
           <div class="heading">
-            <h4>Client Systems Administrator/Citrix Admin</h4>
-            <span class="years">2015 - Present</span>
-            <a class="links" href="http://www.epic.com/">Epic Systems</a>
+            <h4>Systems Engineer/Development Lead</h4>
+            <span class="years">2015 - 2021</span>
+            <a class="links" href="https://www.epic.com/services">Epic Hosting</a>
           </div>
-          <ul class="article-body">
-            <li>Manage the presentation layer of Electronic Medical Record (EMR) software solutions</li>
-            <li>Develop internal web applications (.NET/C# + Knockout.js)</li>
-            <li>Contriute to automation/scalability projects</li>
-          </ul>
+          <div class="article-body">
+            <ul>
+              <li>Led development managers and teams in establishing robust policies, processes, standards, and automated CI/CD tools.</li>
+              <li>Coordinated the implementation and management of complex "infrastructure as code" pipelines using GitLab, Artifactory, Puppet, and more.</li>
+              <li>Created reliable automation tools using PowerShell to streamline infrastructure build and configuration.</li>
+              <li>Managed the virtual application deployment platform (Citrix + Windows) for large health care organizations.</li>
+              <li>Developed internal web applications (.NET/C# + Knockout.js) to help support engineers better track client environment configurations.</li>
+              <li>Wrote extensive documentation to support maintainable solutions and improve employee on-boarding.</li>
+            </ul>
+          </div>
         </article>
         <article class="employer wide">
           <div class="heading">
             <h4>Content Editor/Administrator</h4>
             <span class="years">2013 - 2015</span>
-            <a class="links" href="https://www.fluentu.com/">FluentU</a>
+            <div class="links"><a href="https://www.fluentu.com/">FluentU</a> (French Language Team)</div>
           </div>
-          <ul class="article-body">
-            <li>Developed a content management platform for translators and content seekers.</li>
-            <li>Built tools to measure, visualize, and use performance metrics to improve efficiency.</li>
-          </ul>
+          <div class="article-body">
+            <ul>
+              <li>Created a custom content management platform for translators and content seekers.</li>
+              <li>Built tools to measure, visualize, and use performance metrics to improve efficiency.</li>
+            </ul>
+          </div>
         </article>
         <article class="employer wide remove">
           <div class="heading">
@@ -459,22 +429,84 @@
             <span class="years">2008 - 2012</span>
             <a class="links" href="https://apps.carleton.edu/campus/its/peps/">Carleton College Media Department</a>
           </div>
-          <p class="article-body">
-            Along with a team of technologically-inclined students, I helped film and publish video versions of campus events and run a media equipment lending library. I also supported students with their multimedia projects by providing guidance in using Logic, Final Cut Pro, and Adobe Photoshop.
-          </p>
+          <div class="article-body">
+            <p>
+              Along with a team of technologically-inclined students, I helped film and publish video versions of campus events and run a media equipment lending library. I also supported students with their multimedia projects by providing guidance in using Logic, Final Cut Pro, and Adobe Photoshop.
+            </p>
+          </div>
         </article>
+      </section>
+      <section class="projects">
+        <h2 class="inverted rounded"><span class="fa fa-wrench left"></span>Development Projects</h2>
+        <div class="content with-images">
+          <img class="thumbnail-image" src="https://tboddyspargo.github.io/img/blocipedia_landing_1.png" />
+          <article class="wide">
+            <div class="heading">
+              <h4><a href="https://github.com/tboddyspargo/blocipedia" target="_blank">Blocipedia</a> <small>(Rails)</small></h4>
+              <span class="years"></span>
+            </div>
+            <div class="article-body">
+              <ul>
+                <li>Used RSpec and the test driven development (TDD) paradigm to create a maintainable codebase.</li>
+                <li>Worked with Rails migrations and a simple PostgreSQL back-end.</li>
+                <li>Worked in a cloud IDE and deployed to Heroku cloud PaaS provider.</li>
+                <li>Leveraged Devise and Pundit to quickly implement authentication and authorization features.</li>
+              </ul>
+            </div>
+          </article>
+          <img class="thumbnail-image" src="https://tboddyspargo.github.io/img/chatterbox_landing2.png" />
+          <article class="wide">
+            <div class="heading">
+              <h4><a href="https://github.com/tboddyspargo/bloc-chat-angular" target="_blank">ChatterBox</a> <small>(AngularJS + Firebase)</small></h4>
+              <span class="years"></span>
+            </div>
+            <div class="article-body">
+              <ul>
+                <li>Created directives and services to separate and re-use data retrieval and functional elements.</li>
+                <li>Designed an elaborate data model to enhance application security using Firebase.</li>
+              </ul>
+            </div>
+          </article>
+          <img class="thumbnail-image right" src="https://tboddyspargo.github.io/img/blocjams3_landing1.png" />
+          <article class="wide">
+            <div class="heading">
+              <h4><a href="https://github.com/tboddyspargo/bloc-jams-react" target="_blank">BlocJams</a> <small>(React)</small></h4>
+              <span class="years"></span>
+            </div>
+            <div class="article-body">
+              <ul>
+                <li>Created site elements as reusable React components.</li>
+                <li>Used state-aware event listener callbacks to support plyr audio framework.</li>
+              </ul>
+            </div>
+          </article>
+          <img class="thumbnail-image right" src="https://tboddyspargo.github.io/img/bloculator_main.png" />
+          <article class="wide">
+            <div class="heading">
+              <h4><a href="https://github.com/tboddyspargo/bloc-calculator" target="_blank">Bloculator</a> <small>(Ruby)</small></h4>
+              <span class="years"></span>
+            </div>
+            <div class="article-body">
+              <ul>
+                <li>Researched infix and postfix mathematic notation styles to support complex expressions.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
       </section>
       <section class="education">
         <h2 class="inverted rounded"><span class="fa fa-mortar-board left"></span>Education</h2>
         <article class="school wide">
           <div class="heading">
             <h4>Web Development Track</h4>
-            <span class="years">2017 - Present</span>
+            <span class="years">2017 - 2018</span>
             <a class="links" href="https://www.bloc.io/">Bloc.io</a>
           </div>
-          <p class="article-body remove">
-            The part-time program at Bloc is an excellent, mentor-led course which has allowed me to work on my skills as a web developer. The curriculum follows many aspects of the web development stack from the front-end with JavaScript (React/AngularJS) to back-ends powered by Ruby on Rails and Google Firebase.
-          </p>
+          <div class="article-body remove">
+            <p>
+              The part-time program at Bloc is an excellent, mentor-led course which has allowed me to work on my skills as a web developer. The curriculum follows many aspects of the web development stack from the front-end with JavaScript (React/AngularJS) to back-ends powered by Ruby on Rails w/ PostgreSQL and Google Firebase.
+            </p>
+          </div>
         </article>
         <article class="school wide">
           <div class="heading">
@@ -482,9 +514,11 @@
             <span class="years">2012 - 2015</span>
             <div class="links"><a href="https://www.seineouest.fr/culture_et_loisirs_conservatoire_d_issy_les_moulineaux.html">Conservatories Niedermeyer</a> and <a href="http://www.conservatoire.be/">Royal de Bruxelles</a></div>
           </div>
-          <p class="article-body remove">
-            After receiving my undergraduate degree, I moved to France and then Belgium to pursue a musical education. I ended up at the Royal Conservatory in Brussels where I placed into and completed my second year. While I ultimately decided that a career as a musician wasn’t for me, music is still a passion of mine. Additionally, being a full-time student while working 30-35 hrs/week substantially improved my time management skills.
-          </p>
+          <div class="article-body remove">
+            <p>
+              After receiving my undergraduate degree, I moved to France and then Belgium to pursue a musical education. I ended up at the Royal Conservatory in Brussels where I placed into and completed my second year. While I ultimately decided that a career as a musician wasn’t for me, music is still a passion of mine. Additionally, being a full-time student while working 30-35 hrs/week substantially improved my time management skills.
+            </p>
+          </div>
         </article>
         <article class="school wide">
           <div class="heading">
@@ -493,9 +527,11 @@
             
             <div class="links"><a href="https://www.carleton.edu/">Carleton College</a> | GPA: 3.54</div>
           </div>
-          <p class="article-body remove">
-            I received an exceptional liberal arts education from Carleton, taking advantage of study abroad opportunities in both France and Spain as I slowly decided on a major in Romance Languages. Carleton is also where I took my first computer science class, introducing me to the endless possibilities of a career in programming.
-          </p>
+          <div class="article-body remove">
+            <p>
+              I received an exceptional liberal arts education from Carleton, taking advantage of study abroad opportunities in both France and Spain as I slowly decided on a major in Romance Languages. Carleton is also where I took my first computer science class, introducing me to the endless possibilities of a career in programming.
+            </p>
+          </div>
         </article>
       </section>
     </div>
