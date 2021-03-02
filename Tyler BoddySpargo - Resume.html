@@ -9,32 +9,55 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
       /*
-        COLORS
-
-        primary color: rgba(2, 69, 138, 1)
-        primary color dark: rgba(0, 58, 117, 1);
-
-        accent color: rgba(61, 39, 1, 1);
-       */
-      h1, h2, h3,
-      .text-primary-color {
-        color: rgb(9, 132, 169);
-      }
-      a {
-        color: rgba(2, 69, 138, 1);
-      }
-      header .pattern {
-        fill: black;
-      }
-      /*
         SITE-WIDE
        */
+      :root {
+        --primary-color: rgb(9, 132, 169);
+        --primary-color-rgb: 9, 132, 169;
+
+        --primary-color-dark: rgb(2, 69, 138);
+        --primary-color-dark-rgb: 2, 69, 138;
+
+        --complimentary-color: rgb(245, 184, 37);
+        --complimentary-color-rgb: 245, 184, 37;
+
+        --complimentary-color-dark: rgb(168, 119, 0);
+        --complimentary-color-dark-rgb: 168, 119, 0;
+
+        --accent-color: rgb(168, 52, 17);
+        --accent-color-rgb: 168, 52, 17;
+
+        --accent-color-dark: rgb(94, 36, 19);
+        --accent-color-dark-rgb: 94, 36, 19;
+      }
       * {
         box-sizing: border-box;
       }
+      h1.name {
+        color: rgb(9, 132, 169);
+        color: rgba(var(--primary-color-rgb), 1);
+      }
+      h1, h2, h3 {
+        color: rgb(9, 132, 169);
+        color: rgba(var(--accent-color-rgb), 1);
+      }
+      h2,h3 {
+        border-color: rgba(9, 132, 169, 1);
+        border-bottom: 1px solid rgba(var(--primary-color-rgb), 1);
+      }
+      .inverted {
+        background-color: rgba(9, 132, 169, 0.8);
+        background-color: rgba(var(--accent-color-rgb), 0.8);
+        border: none;
+        color: white;
+      }
+      a {
+        color: rgb(2, 69, 138, 1);
+        color: rgba(var(--primary-color-dark-rgb), 1);
+      }
       #page-container {
         background-color: white;
-        color: black;
+        color: rgba(50, 50, 50, 1);
         font-family: 'Open Sans';
         font-size: 16px;
       }
@@ -51,15 +74,11 @@
         padding-bottom: 1px;
         margin-bottom: 3px;
       }
-      h2,h3 {
-        border-bottom: 1px solid rgb(9, 132, 169);
-      }
       h3 {
         font-size: 1.3em;
       }
       h4 {
         font-size: 1.2em;
-        
         margin-top: 0;
       }
       .remove {
@@ -68,16 +87,8 @@
       .hidden {
         visibility: hidden !important;
       }
-      .inverted {
-        background-color: rgba(9, 132, 169, 0.8);
-        color: white;
-      }
       .rounded {
         border-radius: 3px;
-      }
-      .label-pill {
-        padding: 3px 12px;
-        border-radius: 20px;
       }
       .fa {
         margin: 5px 10px;
@@ -95,7 +106,7 @@
       }
       header {
         position: relative;
-        font-family: 'Josefin Sans';
+        font-family: 'Josefin Sans'; 
         height: 80px;
         grid-column: 1 / span 2;
       }
@@ -142,10 +153,73 @@
         list-style: none;
       }
       .side-list-item {
-        margin-bottom: 5px;
+        margin-bottom: 0px;
+        padding: 1px 0;
       }
       .side-list-item .fa {
         margin-left: 0;
+      }
+      progress {
+        /* RESETS */
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: none;
+        width: 100%;
+        height: 10px;
+        color: rgba(9, 132, 169, 0.8);
+        color: rgba(var(--complimentary-color-rgb), 0.8);
+        background-color: rgba(225,225,225, 1);
+        border-radius: 3px;
+        margin-top: 2px;
+      }
+      progress::-webkit-progress-bar {
+        background-color: rgba(225,225,225, 1);
+        border-radius: 3px;
+      }
+      progress::-moz-progress-bar {
+        background-color: rgba(9, 132, 169, 0.8);
+        background-color: rgba(var(--complimentary-color-rgb), 0.8);
+        border-radius: 3px;
+      }
+      progress::-webkit-progress-value {
+        background-color: rgba(9, 132, 169, 0.8);
+        background-color: rgba(var(--complimentary-color-rgb), 0.8);
+        border-radius: 3px;
+      }
+      .progress-bar.transparent,
+      progress.transparent{
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      .progress-bar.transparent,
+      progress.transparent::-webkit-progress-bar {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      progress.transparent::-webkit-progress-value {
+        background-color: rgba(255, 255, 255, 0.9);
+      }
+      progress.transparent::-moz-progress-bar {
+        background-color: rgba(255, 255, 255, 0.9);
+      }
+      progress[value="25"]::after {
+        content: "Exploring";
+      }
+      progress[value="50"]::after {
+        content: "Can be independent";
+      }
+      progress[value="75"]::after {
+        content: "Can coach others";
+      }
+      progress[value="100"]::after {
+        content: "Expert";
+      }
+      .progress-label,
+      progress[value]::after  {
+        display: block;
+        font-style: italic;
+        font-size: 9px;
+        text-align: right;
+        color: initial;
       }
       /*
         CONTENT
@@ -250,7 +324,7 @@
     <style>
       /*
         PRINTOUT STYLE
-      */
+       */
       @page {
         margin: 0.25in;
         size: 8.5in 11in;
@@ -260,16 +334,6 @@
        */
       @media print {
         /*
-          COLOR
-         */
-        .label-pill {
-          border-width: 2px;
-        }
-        .label-pill.inverted {
-          background-color: rgba(0,0,0,0.25) !important;
-          color: black !important;
-        }
-        /*
           LAYOUT
          */
         #page-container {
@@ -277,6 +341,9 @@
           padding: 0px;
           font-size: 11px;
           grid-template-columns: 150px auto
+        }
+        table {
+          page-break-inside : avoid
         }
         header {
           height: 60px;
@@ -301,8 +368,8 @@
         .back-button {
           display: none;
         }
-        table {
-          page-break-inside : avoid
+        .label-pill {
+          border-width: 2px;
         }
       }
     </style>
@@ -353,21 +420,48 @@
           <ul class="side-list">
             <li class="side-list-item">
               <strong>Puppet</strong>
-                  <div class="progress">
-                    <div class="progress-bar transparent"><div class="filled" style="width: 80%"></div></div>
-                    <span class="progress-label">Advanced</span>
-                  </div>
+              <progress class="skill-level" max="100" value="100"></progress>
             </li>
-            <li class="side-list-item">PowerShell</li>
-            <li class="side-list-item">Git</li>
-            <li class="side-list-item">AngularJS</li>
-            <li class="side-list-item">Knockout.js</li>
-            <li class="side-list-item">JavaScript ES6</li>
-            <li class="side-list-item">Python</li>
-            <li class="side-list-item">CSS & SCSS</li>
-            <li class="side-list-item">Ruby on Rails</li>
-            <li class="side-list-item">React</li>
-            <li class="side-list-item">HTML5</li>
+            <li class="side-list-item">
+              <strong>PowerShell</strong>
+              <progress class="skill-level" max="100" value="100"></progress>
+            </li>
+            <li class="side-list-item">
+              <strong>Git</strong>
+              <progress class="skill-level" max="100" value="50"></progress>
+            </li>
+            <li class="side-list-item">
+              <strong>AngularJS</strong>
+              <progress class="skill-level" max="100" value="50"></progress>
+            </li>
+            <li class="side-list-item">
+              <strong>Knockout.js</strong>
+              <progress class="skill-level" max="100" value="50"></progress>
+            </li>
+            <li class="side-list-item">
+              <strong>JavaScript (ES6)</strong>
+              <progress class="skill-level" max="100" value="75"></progress>
+            </li>
+            <li class="side-list-item">
+              <strong>Python</strong>
+              <progress class="skill-level" max="100" value="50"></progress>
+            </li>
+            <li class="side-list-item">
+              <strong>CSS & Pre-processors</strong>
+              <progress class="skill-level" max="100" value="75"></progress>
+            </li>
+            <li class="side-list-item">
+              <strong>Ruby on Rails</strong>
+              <progress class="skill-level" max="100" value="50"></progress>
+            </li>
+            <li class="side-list-item">
+              <strong>React</strong>
+              <progress class="skill-level" max="100" value="75"></progress>
+            </li>
+            <li class="side-list-item">
+              <strong>HTML5</strong>
+              <progress class="skill-level" max="100" value="75"></progress>
+            </li>
           </ul>
         </div>
       </div>
@@ -394,7 +488,7 @@
         <h2 class="inverted rounded"><span class="fa fa-user-circle left"></span>Summary</h2>
         <article class="wide">
           <p>
-            The primary theme of my career has been to identify inefficiencies or negative outcome trends and address them with process and automation. My more recent focus has been on scaling those solutions and replicating the mindset and approach across teams at Epic Hosting, a medical software infrastructure management service provider. I am very interested in tools that promote those goals and enable developers and engineers to excel at quickly delivering high-quality products and features.
+            The primary theme of my career has been to identify inefficiencies and patterns of negative outcomes and to address them with process improvements and automation. My more recent focus has been on scaling those solutions and replicating approach across teams at Epic Hosting, a medical software infrastructure management service provider. I am very interested in tools that enable developers and engineers to excel at quickly delivering high-quality products and features, by promoting efficiency, quality, and scalability.
           </p>
         </article>
       </section>
@@ -410,10 +504,10 @@
             <ul>
               <li>Led development managers and teams in establishing robust policies, processes, standards, and automated CI/CD tools.</li>
               <li>Coordinated the implementation and management of complex "infrastructure as code" pipelines using GitLab, Artifactory, Puppet, and more.</li>
+              <li>Wrote extensive documentation to support maintainable solutions and improve employee on-boarding.</li>
               <li>Created reliable automation tools using PowerShell to streamline infrastructure build and configuration.</li>
               <li>Managed the virtual application deployment platform (Citrix + Windows) for large health care organizations.</li>
               <li>Developed internal web applications (.NET/C# + Knockout.js) to help support engineers better track client environment configurations.</li>
-              <li>Wrote extensive documentation to support maintainable solutions and improve employee on-boarding.</li>
             </ul>
           </div>
         </article>
@@ -532,7 +626,7 @@
             <h4>BA in Romance Languages (French/Spanish)</h4>
             <span class="years">2008 - 2012</span>
             
-            <div class="links"><a href="https://www.carleton.edu/">Carleton College</a> | GPA: 3.54</div>
+            <div class="links"><a href="https://www.carleton.edu/">Carleton College</a> | 3.54 GPA</div>
           </div>
           <div class="article-body remove">
             <p>
