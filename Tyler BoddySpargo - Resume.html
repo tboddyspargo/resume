@@ -12,20 +12,31 @@
         SITE-WIDE
        */
       :root {
-        --primary-color: rgb(9, 132, 169);
-        --primary-color-rgb: 9, 132, 169;
+        --white-rgb: 255, 255, 255;
 
-        --primary-color-dark: rgb(2, 69, 138);
-        --primary-color-dark-rgb: 2, 69, 138;
+        --primary-1: rgb(86, 208, 245);
+        --primary-1-rgb: 86, 208, 245;
 
-        --complimentary-color: rgb(245, 184, 37);
-        --complimentary-color-rgb: 245, 184, 37;
+        --primary-2: rgb(12, 191, 245);
+        --primary-2-rgb: 12, 191, 245;
 
-        --complimentary-color-dark: rgb(168, 119, 0);
-        --complimentary-color-dark-rgb: 168, 119, 0;
+        --primary-3: rgb(9, 132, 169);
+        --primary-3-rgb: 9, 132, 169;
 
-        --accent-color: rgb(168, 52, 17);
-        --accent-color-rgb: 168, 52, 17;
+        --primary-4: rgb(6, 91, 117);
+        --primary-4-rgb: 6, 91, 117;
+
+        --primary-5: rgb(4, 69, 89);
+        --primary-5-rgb: 4, 69, 89;
+
+        --complimentary-color: rgb(247, 205, 17);
+        --complimentary-color-rgb: 247, 205, 17;
+
+        --complimentary-color-dark: rgb(217, 179, 16);
+        --complimentary-color-dark-rgb: 217, 179, 16;
+
+        --accent-color: rgb(226, 69, 21);
+        --accent-color-rgb: 226, 69, 21;
 
         --accent-color-dark: rgb(94, 36, 19);
         --accent-color-dark-rgb: 94, 36, 19;
@@ -35,25 +46,31 @@
       }
       h1.name {
         color: rgb(9, 132, 169);
-        color: rgba(var(--primary-color-rgb), 1);
+        color: rgba(var(--complimentary-color-dark-rgb), 1);
+        text-shadow: 1px 2px rgba(var(--primary-5-rgb), 1);
       }
       h1, h2, h3 {
         color: rgb(9, 132, 169);
-        color: rgba(var(--accent-color-rgb), 1);
+        color: rgba(var(--primary-4-rgb), 1);
       }
       h2,h3 {
         border-color: rgba(9, 132, 169, 1);
-        border-bottom: 1px solid rgba(var(--primary-color-rgb), 1);
+        border-bottom: 1px solid rgba(var(--primary-4-rgb), 1);
       }
       .inverted {
-        background-color: rgba(9, 132, 169, 0.8);
-        background-color: rgba(var(--accent-color-rgb), 0.8);
+        background-color: rgba(9, 132, 169, 1);
+        background-color: rgba(var(--primary-3-rgb), 0.8);
         border: none;
         color: white;
+        color: rgba(var(--white-rgb), 1);
       }
       a {
-        color: rgb(2, 69, 138, 1);
-        color: rgba(var(--primary-color-dark-rgb), 1);
+        color: rgb(9, 132, 169);
+        color: rgba(var(--primary-3-rgb), 1);
+      }
+      a:hover {
+        color: rgb(12, 191, 245);
+        color: rgba(var(--primary-2-rgb), 1);
       }
       #page-container {
         background-color: white;
@@ -79,7 +96,7 @@
       }
       h4 {
         font-size: 1.2em;
-        margin-top: 0;
+        margin-top: 0px;
       }
       .remove {
         display: none !important;
@@ -91,6 +108,9 @@
         border-radius: 3px;
       }
       .fa {
+        margin: 5px 10px 5px 5px;
+      }
+      .inverted .fa {
         margin: 5px 10px;
       }
       .right {
@@ -111,7 +131,7 @@
         grid-column: 1 / span 2;
       }
       #sidebar {
-        padding: 10px 0;
+        padding: 10px 0px;
         grid-column: 1 / 2;
       }
       .main {
@@ -127,13 +147,8 @@
         HEADER
        */
       .user-buttons {
-        position: absolute;
-        right: 0;
-        height: 100%;
-        margin-right: 20px;
-      }
-      .user-buttons > button {
-        margin-top: 50%;
+        position: relative;
+        float: right;
       }
       .profession {
         position: relative;
@@ -147,17 +162,21 @@
       .side-section .content {
         padding: 0 5px;
       }
+      .contact .side-list-item {
+        font-size: 0.9em;
+      }
       .side-list {
-        margin: 0;
+        margin: 0px;
         padding: 0 20px;
         list-style: none;
       }
       .side-list-item {
         margin-bottom: 0px;
-        padding: 1px 0;
+        padding: 1px 0px;
+        font-size: 0.8em;
       }
       .side-list-item .fa {
-        margin-left: 0;
+        margin-left: 0px;
       }
       progress {
         /* RESETS */
@@ -167,10 +186,11 @@
         border: none;
         width: 100%;
         height: 10px;
-        color: rgba(9, 132, 169, 0.8);
-        color: rgba(var(--complimentary-color-rgb), 0.8);
+        color: rgba(9, 132, 169, 1);
+        color: rgba(var(--primary-5-rgb), 1);
         background-color: rgba(225,225,225, 1);
-        border-radius: 3px;
+        /* border: 1px solid rgba(50, 50, 50, 0.5); */
+        border-radius: 4px;
         margin-top: 2px;
       }
       progress::-webkit-progress-bar {
@@ -178,13 +198,13 @@
         border-radius: 3px;
       }
       progress::-moz-progress-bar {
-        background-color: rgba(9, 132, 169, 0.8);
-        background-color: rgba(var(--complimentary-color-rgb), 0.8);
+        background-color: rgba(9, 132, 169, 1);
+        background-color: rgba(var(--primary-5-rgb), 1);
         border-radius: 3px;
       }
       progress::-webkit-progress-value {
-        background-color: rgba(9, 132, 169, 0.8);
-        background-color: rgba(var(--complimentary-color-rgb), 0.8);
+        background-color: rgba(9, 132, 169, 1);
+        background-color: rgba(var(--primary-5-rgb), 1);
         border-radius: 3px;
       }
       .progress-bar.transparent,
@@ -217,7 +237,7 @@
       progress[value]::after  {
         display: block;
         font-style: italic;
-        font-size: 9px;
+        font-size: 0.7em;
         text-align: right;
         color: initial;
       }
@@ -225,7 +245,7 @@
         CONTENT
        */
       section {
-        padding: 0;
+        padding: 0px;
         margin-bottom: 15px;
       }
       article.wide {
@@ -234,7 +254,6 @@
       .heading {
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
       }
       .heading h4 {
         flex: initial;
@@ -243,6 +262,7 @@
       .heading .subheading {
         flex: 100%;
         font-style: italic;
+        margin-top: -5px;
       }
       .heading .years {
         flex: auto;
@@ -270,7 +290,7 @@
         margin-bottom: 10px;
       }
       section:last-of-type {
-        margin-bottom: 0;
+        margin-bottom: 0px;
       }
       article.thumbnail .heading {
         text-align: center;
@@ -280,21 +300,21 @@
         flex: 100%;
       }
       section .summary {
-        margin: 0;
+        margin: 0px;
         display: table-cell;
         width: 50%;
       }
       .article-body {
         margin-top: 5px;
-        margin-bottom: 0;
-        padding-left: 25px;
+        margin-bottom: 0px;
+        padding-left: 10px;
       }
       .article-body > ul {
         padding-left: 25px; 
       }
       .article-body > ul,
       .article-body > p {
-        margin: 5px 0;
+        margin: 5px 0px;
       }
       .thumbnail-image {
         width: 125px;
@@ -356,7 +376,7 @@
           margin-bottom: 5px;
         }
         #sidebar {
-          padding: 0 5px 0 0;
+          padding: 0 5px 0 0px;
           margin: 0px;
         }
         #sidebar .content {
@@ -365,11 +385,8 @@
         .thumbnail-image {
           width: 90px;
         }
-        .back-button {
+        .user-buttons {
           display: none;
-        }
-        .label-pill {
-          border-width: 2px;
         }
       }
     </style>
@@ -377,8 +394,8 @@
   <body id="page-container" class="minimized">
     <header>
       <div class="user-buttons">
-        <button type="button" style="visibility: hidden;" onclick="history.back()" class="back-button">Back</button>
-        <button type="button" style="visibility: hidden;" onclick="window.print()" class="back-button">Print</button>
+        <button type="button" class="back-button" onclick="history.back()">Back</button>
+        <button type="button" onclick="window.print()">Print</button>
       </div>
       <div class="header-title">
         <h1 class="name">Tyler BoddySpargo</h1>
@@ -386,36 +403,36 @@
       </div>
     </header>
     <div id="sidebar">
-      <div class="side-section">
-        <h3><span class="fa fa-address-card left"></span>Contact Info</h3>
+      <div class="side-section contact">
+        <h3><span class="fa fa-address-card"></span>For more...</h3>
         <div class="content">
           <ul class="side-list">
             <li class="side-list-item">
-              <span class="fa fa-envelope left"></span><a href="mailto:boddyspargo.tyler@gmail.com"><strong>E-mail</strong></a>
+              <span class="fa fa-envelope"></span><a href="mailto:boddyspargo.tyler@gmail.com"><strong>E-mail</strong></a>
             </li>
             <li class="side-list-item">
-              <span class="fa fa-file-text left"></span><a href="http://tyler.boddyspargo.com/portfolio"><strong>Portfolio</strong></a>
+              <span class="fa fa-linkedin"></span><a href="http://www.linkedin.com/in/tylerboddyspargo"><strong>LinkedIn</strong></a>
             </li>
             <li class="side-list-item">
-              <span class="fa fa-window-maximize left"></span><a href="http://tyler.boddyspargo.com"><strong>Website</strong></a>
+              <span class="fa fa-file-text"></span><a href="http://tyler.boddyspargo.com/portfolio"><strong>Web Portfolio</strong></a>
             </li>
             <li class="side-list-item">
-              <span class="fa fa-linkedin left"></span><a href="http://www.linkedin.com/in/tylerboddyspargo"><strong>LinkedIn</strong></a>
+              <span class="fa fa-window-maximize"></span><a href="http://tyler.boddyspargo.com"><strong>Website</strong></a>
             </li>
             <li class="side-list-item">
-              <span class="fa fa-github left"></span><a href="http://www.github.com/tboddyspargo"><strong>GitHub</strong></a>
+              <span class="fa fa-github"></span><a href="http://www.github.com/tboddyspargo"><strong>GitHub</strong></a>
             </li>
-            <li class="side-list-item">
-              <span class="fa fa-terminal left"></span><a href="http://www.codewars.com/users/tyler_bodd"><strong>CodeWars</strong></a>
+            <li class="side-list-item remove">
+              <span class="fa fa-terminal"></span><a href="http://www.codewars.com/users/tyler_bodd"><strong>CodeWars</strong></a>
             </li>
-            <li class="side-list-item">
-              <span class="fa fa-code left"></span><a href="http://www.codeschool.com/users/muyleche"><strong>CodeSchool</strong></a>
+            <li class="side-list-item remove">
+              <span class="fa fa-code"></span><a href="http://www.codeschool.com/users/muyleche"><strong>CodeSchool</strong></a>
             </li>
           </ul>
         </div>
       </div>
-      <div class="side-section">
-        <h3><span class="fa fa-tachometer left"></span>Skills</h3>
+      <div class="side-section skills">
+        <h3><span class="fa fa-tachometer"></span>Skills</h3>
         <div class="content">
           <ul class="side-list">
             <li class="side-list-item">
@@ -427,19 +444,23 @@
               <progress class="skill-level" max="100" value="100"></progress>
             </li>
             <li class="side-list-item">
-              <strong>Git</strong>
-              <progress class="skill-level" max="100" value="50"></progress>
+              <strong>GitLab</strong>
+              <progress class="skill-level" max="100" value="100"></progress>
             </li>
             <li class="side-list-item">
-              <strong>AngularJS</strong>
-              <progress class="skill-level" max="100" value="50"></progress>
+              <strong>CI/CD (GitLab)</strong>
+              <progress class="skill-level" max="100" value="75"></progress>
             </li>
             <li class="side-list-item">
-              <strong>Knockout.js</strong>
-              <progress class="skill-level" max="100" value="50"></progress>
+              <strong>JavaScript</strong>
+              <progress class="skill-level" max="100" value="75"></progress>
             </li>
-            <li class="side-list-item">
-              <strong>JavaScript (ES6)</strong>
+            <li class="side-list-item remove">
+              <strong>CSS & Pre-processors</strong>
+              <progress class="skill-level" max="100" value="75"></progress>
+            </li>
+            <li class="side-list-item remove">
+              <strong>HTML5</strong>
               <progress class="skill-level" max="100" value="75"></progress>
             </li>
             <li class="side-list-item">
@@ -447,53 +468,69 @@
               <progress class="skill-level" max="100" value="50"></progress>
             </li>
             <li class="side-list-item">
-              <strong>CSS & Pre-processors</strong>
-              <progress class="skill-level" max="100" value="75"></progress>
+              <strong>Git</strong>
+              <progress class="skill-level" max="100" value="50"></progress>
+            </li>
+            <li class="side-list-item remove">
+              <strong>React</strong>
+              <progress class="skill-level" max="100" value="50"></progress>
+            </li>
+            <li class="side-list-item">
+              <strong>Angular</strong>
+              <progress class="skill-level" max="100" value="50"></progress>
+            </li>
+            <li class="side-list-item remove">
+              <strong>Knockout</strong>
+              <progress class="skill-level" max="100" value="50"></progress>
             </li>
             <li class="side-list-item">
               <strong>Ruby on Rails</strong>
               <progress class="skill-level" max="100" value="50"></progress>
             </li>
             <li class="side-list-item">
-              <strong>React</strong>
-              <progress class="skill-level" max="100" value="75"></progress>
+              <strong>Docker</strong>
+              <progress class="skill-level" max="100" value="25"></progress>
             </li>
             <li class="side-list-item">
-              <strong>HTML5</strong>
-              <progress class="skill-level" max="100" value="75"></progress>
+              <strong>Kubernetes</strong>
+              <progress class="skill-level" max="100" value="25"></progress>
+            </li>
+            <li class="side-list-item">
+              <strong>Go</strong>
+              <progress class="skill-level" max="100" value="25"></progress>
             </li>
           </ul>
         </div>
       </div>
       <div class="side-section">
-        <h3><span class="fa fa-music left"></span>Hobbies</h3>
+        <h3><span class="fa fa-music"></span>Hobbies</h3>
         <div class="content">
           <ul class="side-list">
-            <li class="side-list-item"><span class="fa fa-circle left remove"></span>Ping-Pong</li>
-            <li class="side-list-item"><span class="fa fa-book left remove"></span>Fantasy books</li>
-            <li class="side-list-item"><span class="fa fa-male left remove"></span>Distance running</li>
-            <li class="side-list-item"><span class="fa fa-bicycle left remove"></span>Biking</li>
-            <li class="side-list-item"><span class="fa fa-check left remove"></span>Calisthenics</li>
-            <li class="side-list-item"><span class="fa fa-check left remove"></span>Golf</li>
-            <li class="side-list-item"><span class="fa fa-check left remove"></span>Broomball</li>
-            <li class="side-list-item"><span class="fa fa-check left remove"></span>Playing guitar</li>
-            <li class="side-list-item"><span class="fa fa-check left remove"></span>Playing piano</li>
-            <li class="side-list-item"><span class="fa fa-globe left remove"></span>Budget traveling</li>
+            <li class="side-list-item"><span class="fa fa-circle remove"></span>Ping-Pong</li>
+            <li class="side-list-item"><span class="fa fa-book remove"></span>Fantasy books</li>
+            <li class="side-list-item"><span class="fa fa-male remove"></span>Distance running</li>
+            <li class="side-list-item"><span class="fa fa-bicycle remove"></span>Biking</li>
+            <li class="side-list-item"><span class="fa fa-check remove"></span>Calisthenics</li>
+            <li class="side-list-item"><span class="fa fa-check remove"></span>Golf</li>
+            <li class="side-list-item"><span class="fa fa-check remove"></span>Broomball</li>
+            <li class="side-list-item"><span class="fa fa-check remove"></span>Playing guitar</li>
+            <li class="side-list-item"><span class="fa fa-check remove"></span>Playing piano</li>
+            <li class="side-list-item"><span class="fa fa-globe remove"></span>Budget traveling</li>
           </ul>
         </div>
       </div>
     </div>
     <div class="main">
       <section class="profile">
-        <h2 class="inverted rounded"><span class="fa fa-user-circle left"></span>Summary</h2>
+        <h2 class="inverted rounded"><span class="fa fa-user-circle"></span>Introduction</h2>
         <article class="wide">
           <p>
-            The primary theme of my career has been to identify inefficiencies and patterns of negative outcomes and to address them with process improvements and automation. My more recent focus has been on scaling those solutions and replicating approach across teams at Epic Hosting, a medical software infrastructure management service provider. I am very interested in tools that enable developers and engineers to excel at quickly delivering high-quality products and features, by promoting efficiency, quality, and scalability.
+            The primary theme of my career has been to identify inefficiencies and patterns of negative outcomes and to address them with process improvements and automation. My more recent focus has been on scaling those solutions and replicating that approach across teams at Epic Hosting, a medical software infrastructure management service provider. I am very interested in tools that enable developers and engineers to excel at quickly delivering high-quality products and features by promoting efficiency, quality, and scalability.
           </p>
         </article>
       </section>
       <section class="employment">
-        <h2 class="inverted rounded"><span class="fa fa-building left"></span>Technical Work Experience</h2>
+        <h2 class="inverted rounded"><span class="fa fa-building"></span>Work Experience</h2>
         <article class="employer wide">
           <div class="heading">
             <h4>Systems Engineer/Development Lead</h4>
@@ -503,7 +540,7 @@
           <div class="article-body">
             <ul>
               <li>Led development managers and teams in establishing robust policies, processes, standards, and automated CI/CD tools.</li>
-              <li>Coordinated the implementation and management of complex "infrastructure as code" pipelines using GitLab, Artifactory, Puppet, and more.</li>
+              <li>Coordinated the implementation and management of complex infrastructure-as-code pipelines using GitLab, Artifactory, Puppet, and more.</li>
               <li>Wrote extensive documentation to support maintainable solutions and improve employee on-boarding.</li>
               <li>Created reliable automation tools using PowerShell to streamline infrastructure build and configuration.</li>
               <li>Managed the virtual application deployment platform (Citrix + Windows) for large health care organizations.</li>
@@ -538,7 +575,7 @@
         </article>
       </section>
       <section class="projects">
-        <h2 class="inverted rounded"><span class="fa fa-wrench left"></span>Development Projects</h2>
+        <h2 class="inverted rounded"><span class="fa fa-code"></span>Development Projects</h2>
         <div class="content with-images">
           <img class="thumbnail-image" src="https://tboddyspargo.github.io/img/blocipedia_landing_1.png" />
           <article class="wide">
@@ -568,8 +605,8 @@
               </ul>
             </div>
           </article>
-          <img class="thumbnail-image right" src="https://tboddyspargo.github.io/img/blocjams3_landing1.png" />
-          <article class="wide">
+          <img class="thumbnail-image remove" src="https://tboddyspargo.github.io/img/blocjams3_landing1.png" />
+          <article class="wide remove">
             <div class="heading">
               <h4><a href="https://github.com/tboddyspargo/bloc-jams-react" target="_blank">BlocJams</a> <small>(React)</small></h4>
               <span class="years"></span>
@@ -581,8 +618,8 @@
               </ul>
             </div>
           </article>
-          <img class="thumbnail-image right" src="https://tboddyspargo.github.io/img/bloculator_main.png" />
-          <article class="wide">
+          <img class="thumbnail-image remove" src="https://tboddyspargo.github.io/img/bloculator_main.png" />
+          <article class="wide remove">
             <div class="heading">
               <h4><a href="https://github.com/tboddyspargo/bloc-calculator" target="_blank">Bloculator</a> <small>(Ruby)</small></h4>
               <span class="years"></span>
@@ -596,7 +633,7 @@
         </div>
       </section>
       <section class="education">
-        <h2 class="inverted rounded"><span class="fa fa-mortar-board left"></span>Education</h2>
+        <h2 class="inverted rounded"><span class="fa fa-mortar-board"></span>Education</h2>
         <article class="school wide">
           <div class="heading">
             <h4>Web Development Track</h4>
