@@ -90,7 +90,8 @@
         font-size: 1.2em;
         margin-top: 0px;
       }
-      .remove {
+      .remove,
+      .remove * {
         display: none !important;
       }
       .hidden {
@@ -120,7 +121,7 @@
       header {
         position: relative;
         font-family: 'Josefin Sans'; 
-        min-height: 80px;
+        height: 80px;
         grid-column: 1 / span 2;
         grid-row: 1
       }
@@ -151,9 +152,10 @@
       #profession {
         position: relative;
         float: right;
-        bottom: 5px;
-        font-size: 1.5em;
+        bottom: 0px;
+        font-size: 1.25em;
         margin-right: 10px;
+        margin-bottom: -10px;
       }
       /*
         SIDEBAR
@@ -359,6 +361,11 @@
 
     </style>
     <style>
+      @media screen {
+        .side-list-item a {
+          font-size: 0.9em
+        }
+      }
       /*
         PRINTOUT STYLE
        */
@@ -415,25 +422,28 @@
   <body id="page-container" class="minimized">
     <header>
       <div id="user-buttons">
-        <button type="button" class="back-button" onclick="history.back()">Back</button>
-        <button type="button" onclick="window.print()">Print</button>
+        <button type="button" class="back-button remove" onclick="history.back()">Back</button>
+        <button type="button" class="remove" onclick="window.print()">Print</button>
       </div>
       <div class="header-title">
         <h1 id="name">Tyler Boddy&shy;Spargo</h1>
-        <i id="profession">DevOps Manager</i>
+        <i id="profession">DevOps Engineer, Software Engineer</i>
       </div>
     </header>
     <div id="main">
       <section class="profile">
-        <h2 class="inverted rounded"><span class="fa fa-user-circle"></span>Intro</h2>
+        <h2 class="inverted rounded"><span class="fa fa-fw fa-user-circle"></span>Intro</h2>
         <article class="">
-          <p>
-            Most of my life has been defined by hard work and aggressive goals, but the primary theme of my professional career has been to identify inefficiencies and patterns of negative outcomes and to address them with process improvements and automation. I see the technology industry's Dev(Sec)Ops trend as a validating expression of my inherent instincts for code-based solutions, quick iterations, automated testing and deployments, short feedback loops, and data-driven decision making. Recently, I have focused on scaling such solutions and increasing the adoption of DevOps practices across teams at Epic Hosting, a medical software infrastructure management service provider. I am currently looking for opportunities to further explore cloud IaaS providers like Google Cloud Platform and Amazon Web Services, platforms like Kubernetes, and provisioning tools like Terraform. I know that my leadership skills and high expectations will also help teams use those technologies effectively.
+          <p class="remove">
+            Most of my life has been defined by hard work and aggressive goals, but the primary theme of my professional career has been to identify inefficiencies and patterns of negative outcomes and to address them with process improvements and automation. I see the technology industry's DevOps trend as a validating expression of my natural instincts for code-based solutions, automated testing and deployments, short feedback loops, and data-driven decision making. Recently, I have focused on scaling such solutions and increasing the adoption of DevOps practices across teams at Epic Hosting, a medical software infrastructure management service provider. I am currently looking for opportunities to further explore my interests in software engineering as well as developer efficiency and application delivery/management using platforms like Kubernetes, Terraform, and CI/CD. I know that my leadership skills and high expectations will also help teams use those technologies effectively.
+          </p>
+          <p class="">
+            My goal is to create and contribute to software that helps people collaborate and work meaningfully with data and technology. I have experience as a systems administrator and a DevOps engineer, managing sensitive infrastructure and guiding large groups of people in adopting DevOps practices to improve operational outcomes. These experiences have greatly influenced to my interest in helping engineers improve efficiency and effectiveness in all areas of the Software Development Life Cycle. I'm currently looking for opportunities to grow as a developer of complex and distributed systems using technologies like Go, Kubernetes, Terraform, and CI/CD tools to deliver high quality software with a highly iterative process. You can rely on me to be highly professional and personable, to be determined to exceed quality expectations, to proactively help and coach others, and to speak up with my opinions and technical expertise.
           </p>
         </article>
       </section>
       <section class="employment">
-        <h2 class="inverted rounded"><span class="fa fa-building"></span>Work Experience</h2>
+        <h2 class="inverted rounded"><span class="fa fa-fw fa-building"></span>Work Experience</h2>
         <article class="employer">
           <div class="heading">
             <h4>DevOps Lead (Client Systems)</h4>
@@ -448,7 +458,7 @@
               <li class="">Collaborated with multiple teams to architect cross-platform integrations between ServiceNow, Puppet, Splunk, and more.</li>
               <li class="remove">Managed multiple Puppet instances serving 20,000+ nodes.</li>
               <li class="">Designed and oversaw configuration management strategies and best practices to facilitate cloud migrations (Azure).</li>
-              <li class="">Created and presented project roadmaps and progress updates for senior leadership.</li>
+              <li class="">Created and presented project roadmaps, significant purchase requests, and progress updates to senior leadership.</li>
               <li class="remove">Wrote extensive documentation to support maintainable solutions and improve employee on-boarding.</li>
               <li class="">Created reliable automation tools using PowerShell to streamline infrastructure build and configuration.</li>
               <li class="">Co-founded a popular "snack time" weekly team bonding event. 😁</li>
@@ -484,7 +494,7 @@
         </article>
       </section>
       <section class="projects">
-        <h2 class="inverted rounded"><span class="fa fa-code"></span>Development Projects</h2>
+        <h2 class="inverted rounded"><span class="fa fa-fw fa-code"></span>Development Projects</h2>
         <article class="">
           <div class="heading">
             <h4><a href="https://github.com/tboddyspargo/blocipedia" target="_blank">Blocipedia</a> <small>(Rails)</small></h4>
@@ -492,14 +502,34 @@
           </div>
           <div class="project-thumbnail remove">
             <img class="thumbnail-image remove" src="https://tboddyspargo.github.io/img/blocipedia_landing_1.png" />
-            <span class="fa fa-newspaper-o project-icon" style="font-size: 3em; padding: 8px 6px 3px 5px; margin: 0px 10px;"></span>
+            <span class="fa fa-book project-icon" style="font-size: 3em; padding: 8px 6px 3px 5px; margin: 0px 10px;"></span>
           </div>
           <div class="article-body">
             <ul>
               <li>Used RSpec and the test driven development (TDD) paradigm to create a maintainable codebase.</li>
-              <li>Worked with Rails migrations and a simple PostgreSQL back-end to perform schema updates.</li>
-              <li>Worked in a cloud IDE and deployed to Heroku cloud PaaS provider.</li>
-              <li>Leveraged Devise and Pundit to quickly implement authentication and authorization features.</li>
+              <li>Performed Ruby runtime and Rails framework upgrades to take advantage of improvements.</li>
+              <li class='remove'>Worked with Rails migrations and a simple PostgreSQL back-end to perform schema updates.</li>
+              <li>Automated deployments to Heroku cloud PaaS provider using GitHub Actions.</li>
+              <li class="remove">Leveraged Devise and Pundit to quickly implement authentication and authorization features.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="remove">
+          <div class="heading">
+            <h4><a href="https://github.com/tboddyspargo/bloccit" target="_blank">Bloccit</a> <small>(Rails)</small></h4>
+            <span class="years"></span>
+          </div>
+          <div class="project-thumbnail remove">
+            <img class="thumbnail-image remove" src="https://tboddyspargo.github.io/img/bloccit_landing1.png" />
+            <span class="fa fa-newspaper-o project-icon"
+              style="font-size: 3em; padding: 8px 6px 3px 5px; margin: 0px 10px;"></span>
+          </div>
+          <div class="article-body">
+            <ul>
+              <li>Used FactoryBot to provide robust test data.</li>
+              <li>Implemented mailers to increase engagement with the site.</li>
+              <li>Migrated to webpack to streamline bundling and delivery of front-end code.</li>
             </ul>
           </div>
         </article>
@@ -550,7 +580,7 @@
         </article>
       </section>
       <section class="education">
-        <h2 class="inverted rounded"><span class="fa fa-mortar-board"></span>Education</h2>
+        <h2 class="inverted rounded"><span class="fa fa-fw fa-mortar-board"></span>Education</h2>
         <article class="school">
           <div class="heading">
             <h4>Bloc.io</h4>
@@ -594,8 +624,24 @@
     </div>
 
     <div id="sidebar">
+      <div class="side-section contact">
+        <h3><span class="fa fa-fw fa-address-card"></span>Contact</h3>
+        <div class="content">
+          <ul class="side-list">
+            <li class="side-list-item">
+              <strong><span class="fa fa-fw fa-envelope remove"></span>Email</strong>
+              <address>
+              <a href="mailto:boddyspargo.tyler@gmail.com">boddyspargo.tyler@gmail.com</a>
+              </address>
+            </li>
+            <li class="side-list-item">
+              <strong><span class="fa fa-fw fa-linkedin remove"></span>LinkedIn</strong>
+              <a href="https://www.linkedin.com/in/tylerboddyspargo">in/tylerboddyspargo</a>
+            </li>
+          </ul>
+        </div>
       <div class="side-section skills">
-        <h3><span class="fa fa-tachometer"></span>Skills</h3>
+        <h3><span class="fa fa-fw fa-tachometer"></span>Skills</h3>
         <div class="content">
           <ul class="side-list">
             <li class="side-list-item">
@@ -608,18 +654,22 @@
             </li>
             <li class="side-list-item">
               <strong>GitLab</strong>
-              <progress class="skill-level" max="100" value="100"></progress>
+              <progress class="skill-level" max="100" value="75"></progress>
             </li>
             <li class="side-list-item">
               <strong>CI/CD (GitLab)</strong>
               <progress class="skill-level" max="100" value="75"></progress>
             </li>
-            <li class="side-list-item">
+            <li class="side-list-item remove">
               <strong>Git</strong>
               <progress class="skill-level" max="100" value="75"></progress>
             </li>
             <li class="side-list-item">
               <strong>JavaScript</strong>
+              <progress class="skill-level" max="100" value="75"></progress>
+            </li>
+            <li class="side-list-item remove">
+              <strong>AngularJS</strong>
               <progress class="skill-level" max="100" value="75"></progress>
             </li>
             <li class="side-list-item remove">
@@ -631,6 +681,14 @@
               <progress class="skill-level" max="100" value="75"></progress>
             </li>
             <li class="side-list-item">
+              <strong>Go</strong>
+              <progress class="skill-level" max="100" value="50"></progress>
+            </li>
+            <li class="side-list-item">
+              <strong>Ruby on Rails</strong>
+              <progress class="skill-level" max="100" value="50"></progress>
+            </li>
+            <li class="side-list-item">
               <strong>Python</strong>
               <progress class="skill-level" max="100" value="50"></progress>
             </li>
@@ -638,20 +696,12 @@
               <strong>React</strong>
               <progress class="skill-level" max="100" value="50"></progress>
             </li>
-            <li class="side-list-item">
-              <strong>Angular</strong>
-              <progress class="skill-level" max="100" value="50"></progress>
-            </li>
             <li class="side-list-item remove">
               <strong>Knockout</strong>
               <progress class="skill-level" max="100" value="50"></progress>
             </li>
-            <li class="side-list-item">
-              <strong>Ruby</strong>
-              <progress class="skill-level" max="100" value="50"></progress>
-            </li>
             <li class="side-list-item remove">
-              <strong>Ruby on Rails</strong>
+              <strong>Ruby</strong>
               <progress class="skill-level" max="100" value="50"></progress>
             </li>
             <li class="side-list-item">
@@ -662,54 +712,48 @@
               <strong>Kubernetes</strong>
               <progress class="skill-level" max="100" value="25"></progress>
             </li>
-            <li class="side-list-item">
-              <strong>Go</strong>
-              <progress class="skill-level" max="100" value="25"></progress>
-            </li>
           </ul>
         </div>
       </div>
       <div class="side-section">
-        <h3><span class="fa fa-music"></span>Hobbies</h3>
+        <h3><span class="fa fa-fw fa-music"></span>Hobbies</h3>
         <div class="content">
           <ul class="side-list">
-            <li class="side-list-item"><span class="fa fa-circle remove"></span>Ping-pong</li>
-            <li class="side-list-item"><span class="fa fa-book remove"></span>Fantasy books</li>
-            <li class="side-list-item"><span class="fa fa-male remove"></span>Distance running</li>
-            <li class="side-list-item"><span class="fa fa-bicycle remove"></span>Biking</li>
-            <li class="side-list-item"><span class="fa fa-check remove"></span>Calisthenics</li>
-            <li class="side-list-item"><span class="fa fa-check remove"></span>Golf</li>
-            <li class="side-list-item"><span class="fa fa-check remove"></span>Broomball</li>
-            <li class="side-list-item"><span class="fa fa-check remove"></span>Playing guitar</li>
-            <li class="side-list-item"><span class="fa fa-check remove"></span>Playing piano</li>
-            <li class="side-list-item"><span class="fa fa-globe remove"></span>Budget traveling</li>
+            <li class="side-list-item"><span class="fa fa-fw fa-circle remove"></span>Ping-pong</li>
+            <li class="side-list-item"><span class="fa fa-fw fa-language remove"></span>Foreign Languages</li>
+            <li class="side-list-item"><span class="fa fa-fw fa-book remove"></span>Fantasy books</li>
+            <li class="side-list-item"><span class="fa fa-fw fa-male remove"></span>Distance running</li>
+            <li class="side-list-item remove"><span class="fa fa-fw fa-bicycle remove"></span>Biking</li>
+            <li class="side-list-item"><span class="fa fa-fw fa-weights remove"></span>Calisthenics</li>
+            <li class="side-list-item"><span class="fa fa-fw fa-circle remove"></span>Golf</li>
+            <li class="side-list-item"><span class="fa fa-fw fa-futbol-o remove"></span>Broomball</li>
+            <li class="side-list-item"><span class="fa fa-fw fa-music remove"></span>Guitar</li>
+            <li class="side-list-item"><span class="fa fa-fw fa-music remove"></span>Piano</li>
+            <li class="side-list-item remove"><span class="fa fa-fw fa-globe remove"></span>Budget traveling</li>
           </ul>
         </div>
       </div>
       <div class="side-section contact">
-        <h3><span class="fa fa-address-card"></span>For more...</h3>
+        <h3><span class="fa fa-fw fa-info-circle"></span>More Info</h3>
         <div class="content">
           <ul class="side-list">
             <li class="side-list-item">
-              <span class="fa fa-envelope"></span><a href="mailto:boddyspargo.tyler@gmail.com"><strong>E-mail</strong></a>
+              <span class="fa fa-fw fa-file-text remove"></span><a href="https://tboddyspargo.github.io/"><strong>Portfolio</strong></a>
             </li>
             <li class="side-list-item">
-              <span class="fa fa-linkedin"></span><a href="https://www.linkedin.com/in/tylerboddyspargo"><strong>LinkedIn</strong></a>
+              <span class="fa fa-fw fa-github remove"></span><a href="https://www.github.com/tboddyspargo"><strong>GitHub</strong></a>
             </li>
             <li class="side-list-item">
-              <span class="fa fa-file-text"></span><a href="https://tboddyspargo.github.io/"><strong>Web portfolio</strong></a>
-            </li>
-            <li class="side-list-item">
-              <span class="fa fa-globe"></span><a href="https://tyler.boddyspargo.com"><strong>Website</strong></a>
-            </li>
-            <li class="side-list-item">
-              <span class="fa fa-github"></span><a href="https://www.github.com/tboddyspargo"><strong>GitHub</strong></a>
+              <span class="fa fa-fw fa-terminal remove"></span><a href="https://www.codewars.com/users/tyler_bodd"><strong>CodeWars</strong></a>
             </li>
             <li class="side-list-item remove">
-              <span class="fa fa-terminal"></span><a href="https://www.codewars.com/users/tyler_bodd"><strong>CodeWars</strong></a>
+              <span class="fa fa-fw fa-file-code-o remove"></span><a href="https://leetcode.com/muyleche/"><strong>LeetCode</strong></a>
             </li>
-            <li class="side-list-item remove">
-              <span class="fa fa-code"></span><a href="https://www.codeschool.com/users/muyleche"><strong>CodeSchool</strong></a>
+            <li class="side-list-item">
+              <span class="fa fa-fw fa-code-fork remove"></span><a href="https://www.hackerrank.com/muyleche"><strong>HackerRank</strong></a>
+            </li>
+            <li class="side-list-item">
+              <span class="fa fa-fw fa-globe remove"></span><a href="https://tyler.boddyspargo.com"><strong>Personal Website</strong></a>
             </li>
           </ul>
         </div>
